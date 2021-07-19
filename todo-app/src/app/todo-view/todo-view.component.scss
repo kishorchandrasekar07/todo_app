@@ -1,0 +1,76 @@
+#todo-app{
+   // align-items: center;
+    .todo-heading{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .todo-view{
+        height: 500px;
+        width: 400px;
+        border: 2px solid black;
+        margin-top: 20px;
+        overflow-y: auto;
+        position: relative;
+        .search-add{
+            height: 40px;
+            border-bottom: 1px solid black;
+            padding:5px 10px;
+            .search{
+                height: 25px;
+                width: 250px;
+                border:1px solid black;
+                border-radius: 20px;
+                margin-top: 5px;
+                float: left;
+            }
+            .add{
+                float: right;
+                font-size: 30px;
+                font-weight:bold;
+                cursor: pointer;
+            }
+        }
+        .content{
+            padding:5px;
+            height: 415px;
+            width: 380px;
+            .todo-value{
+                height: 50px;
+                width: 380px;
+                border: 1px solid black;
+                margin-top: 5px;
+                padding:2px;
+                .strike{
+                    text-decoration: line-through
+                }
+                .todo-value-text{
+                    height: 45px;
+                    width: 300px;
+                    border: 1px dashed black;
+                    float: left;
+                }
+                .todo-value-delete{
+                    float: right;
+                    height: 10px;
+                    width: 40px;
+                    border:1px solid red;
+                    margin-right: 10px;
+                    margin-top: 20px;
+                    color: white;
+                    background-color: red;
+                    padding:5px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .footer{
+            bottom: 10px;
+            height: 20px;
+            width: 100%;
+            border-top: 1px solid black;
+            position: absolute;
+            bottom: 0;
+            font-size: 15px;
+        }
+    }
+}

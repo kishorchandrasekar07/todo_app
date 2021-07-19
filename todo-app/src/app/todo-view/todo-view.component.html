@@ -1,0 +1,34 @@
+<div id="todo-app">
+    <div class="todo-heading">Todo App</div>
+    <div class="todo-view">
+        <div class="search-add">
+            <input type="text" [(ngModel)]="searchValue" (ngModelChange)="searchChange()" class="Search" placeholder="search" > 
+            <div class="add" (click)="createTodoStart()">+</div>
+        </div>
+        <div class="content">
+            <div *ngIf="adding">
+                <div class="todo-value">
+                    <div class="todo-value-text">
+                        <input type="text" [(ngModel)]="todoText" class="todo-value-text" placeholder="search" > 
+                    </div>
+                    <div class="todo-value-delete" (click)="saveTodo()">
+                        Save
+                    </div>
+                </div>
+            </div>
+            <div *ngFor="let todo of todoListDisplay; index as i">
+                <div class="todo-value">
+                    <div class="todo-value-text" [ngClass]="!todo.isValid?'strike':''">
+                        {{todo.text}}
+                    </div>
+                    <div class="todo-value-delete" (click)="deleteTodo(i)">
+                        Delete
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="footer">
+            Total Notes : {{notesCount}}  Search Results Count: {{searchResultsCount}}
+        </div>
+    </div>
+</div>
