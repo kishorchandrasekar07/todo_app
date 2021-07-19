@@ -7,9 +7,9 @@
         </div>
         <div class="content">
             <div *ngIf="adding">
-                <div class="todo-value">
-                    <div class="todo-value-text">
-                        <input type="text" [(ngModel)]="todoText" class="todo-value-text" placeholder="search" > 
+                <div class="todo-value-process">
+                    <div class="todo-value-text-process">
+                        <input type="text" [(ngModel)]="todoText" class="todo-value-text-process" placeholder="Enter Todo Point" > 
                     </div>
                     <div class="todo-value-delete" (click)="saveTodo()">
                         Save
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div *ngFor="let todo of todoListDisplay; index as i">
-                <div class="todo-value">
+                <div *ngIf="!adding" class="todo-value">
                     <div class="todo-value-text" [ngClass]="!todo.isValid?'strike':''">
                         {{todo.text}}
                     </div>

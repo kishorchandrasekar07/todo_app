@@ -48,6 +48,38 @@
                     width: 300px;
                     border: 1px dashed black;
                     float: left;
+                    overflow-y: auto;
+                    overflow-x: auto;
+                }
+                .todo-value-delete{
+                    float: right;
+                    height: 10px;
+                    width: 40px;
+                    border:1px solid red;
+                    margin-right: 10px;
+                    margin-top: 20px;
+                    color: white;
+                    background-color: red;
+                    padding:5px;
+                    cursor: pointer;
+                }
+            }
+            .todo-value-process{
+                height: 250px;
+                width: 380px;
+                border: 1px solid black;
+                margin-top: 5px;
+                padding:2px;
+                .strike{
+                    text-decoration: line-through
+                }
+                .todo-value-text-process{
+                    height: 250px;
+                    width: 300px;
+                    border: 1px dashed black;
+                    float: left;
+                    overflow-y: auto;
+                    overflow-x: auto;
                 }
                 .todo-value-delete{
                     float: right;
